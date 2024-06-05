@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% for x in fruits %}
+    <h1>{{ x }}</h1>
+    {% endfor %}
+
+    <h2>Hello {{ first_name }}, how are you?</h2>
+
+    {% with first_name="Tobias" %}
+    <h2>Hello {{ first_name }}, how are you?</h2>
+    {% endwith %}
+
+    <ul>
+      {% for x in my_members %}
+      <li>
+        <p>{{ x.first_name }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% if greeting == 1 %}
+    <h1>Hello</h1>
+    {% else %}
+    <h1>Bye</h1>
+    {% endif %}
+
+    <ul>
+      {% for x in my_members %}
+      <li>{{ x.first_name }}</li>
+      {% endfor %}
+    </ul>
+
+    <p>In views.py you can see what the fruits variable looks like.</p>
+  </body>
+</html>
