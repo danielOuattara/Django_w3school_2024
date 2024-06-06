@@ -7,7 +7,7 @@ if the value is true.
 
 ```html
 {% if greeting == 1 %}
-  <h1>Hello</h1>
+  <h1>Hello 1</h1>
 {% endif %}
 ```
 
@@ -17,9 +17,9 @@ The `elif` keyword says `if the previous conditions were not true, then try this
 
 ```html
 {% if greeting == 1 %}
-  <h1>Hello</h1>
+  <h1>Hello &</h1>
 {% elif greeting == 2 %}
-  <h1>Welcome</h1>
+  <h1>Welcome 2</h1>
 {% endif %}
 ```
 
@@ -48,6 +48,7 @@ the operator if you just want to check if a variable is not
 empty:
 
 ```html
+<!-- check not empty only -->
 {% if greeting %}
   <h1>Hello</h1>
 {% endif %}
@@ -217,9 +218,13 @@ Let us try the same example with the == operator instead:
 {% endif %}
 ```
 
-How can two objects be the same? Well, if you have two objects that points to the same object, then the is operator evaluates to true:
+How can two objects be the same?
 
-We will demonstrate this by using the {% with %} tag, which allows us to create variables in the template:
+Well, if you have two objects that points to the same object,
+then the `is` operator evaluates to true:
+
+We will demonstrate this by using the {% with %} tag, which
+allows us to create variables in the template:
 
 ```html
 {% with var1=x var2=x %}
