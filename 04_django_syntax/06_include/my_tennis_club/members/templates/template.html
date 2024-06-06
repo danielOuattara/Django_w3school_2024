@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--- ----------------------- -->
+    <hr />
+
+    {% for x in fruits %}
+    <h1>{{ x }}</h1>
+    {% endfor %}
+    <!--- ----------------------- -->
+    <hr />
+
+    {% for x in cars %}
+    <h1>{{ x.brand }}</h1>
+    <p>{{ x.model }}</p>
+    <p>{{ x.year }}</p>
+    {% endfor %}
+    <!--- ----------------------- -->
+    <hr />
+
+    {% for x in members %}
+    <h1>{{ x.id }}</h1>
+    <p>{{ x.first_name }} {{ x.last_name }}</p>
+    {% endfor %}
+    <!--- ----------------------- -->
+    <hr />
+
+    {% for x in members reversed %}
+    <h1>{{ x.id }}</h1>
+    <p>{{ x.first_name }} {{ x.last_name }}</p>
+    {% endfor %}
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in empty_tobject %}
+      <li>{{ x.first_name }}</li>
+      {% empty %}
+      <li>No members</li>
+      {% endfor %}
+    </ul>
+    <!--- ----------------------- -->
+    <hr />
+
+    {% for x in my_object %}
+    <li>{{ x.first_name }}</li>
+    {% empty %}
+    <li>No members</li>
+    {% endfor %}
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in fruits %}
+      <li>{{ forloop.counter }}</li>
+      {% endfor %}
+    </ul>
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in fruits %}
+      <li>{{ forloop.counter0 }}</li>
+      {% endfor %}
+    </ul>
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in fruits %}
+      <li
+        {%
+        if
+        forloop.first
+        %}
+        style="background-color: lightblue"
+        {%
+        endif
+        %}
+      >
+        {{ x }}
+      </li>
+      {% endfor %}
+    </ul>
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in fruits %}
+      <li {% if forloop.last %} style="background-color: lightblue" {% endif %}>
+        {{ x }}
+      </li>
+      {% endfor %}
+    </ul>
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in fruits %}
+      <li>{{ forloop.revcounter }}</li>
+      {% endfor %}
+    </ul>
+    <!--- ----------------------- -->
+    <hr />
+
+    <ul>
+      {% for x in fruits %}
+      <li>{{ forloop.revcounter0 }}</li>
+      {% endfor %}
+    </ul>
+
+    <!--- ----------------------- -->
+    <hr />
+
+    <p>In views.py you can see what the fruits variable looks like.</p>
+  </body>
+</html>
