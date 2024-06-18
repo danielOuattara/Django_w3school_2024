@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--- ----------------------- -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      {% for x in members %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>{{tobias.first_name}} {{tobias.last_name}}</h2>
+  </body>
+</html>
