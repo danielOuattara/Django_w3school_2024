@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--- ---------------------- -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for x in members %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <!--- ---------------------- -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for x in emil %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <!--- ---------------------- -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for x in refsnes %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <!--- ---------------------- -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for x in email_or_tobias_1 %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <!--- ---------------------- -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for x in email_or_tobias_2 %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <!--- ---------------------- -->
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+      </tr>
+      {% for x in field_lookup_data %}
+      <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.first_name }}</td>
+        <td>{{ x.last_name }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br />
+
+    <!--- ---------------------- -->
+  </body>
+</html>
